@@ -33,12 +33,6 @@ const Home: NextPageWithLayout = () => {
             <Link href={'/category/Torneos'}>
               <button>Torneos</button>
             </Link>
-            <Link href={'/sign-up/'}>
-              <button>Sign</button>
-            </Link>
-            <Link href={'/profile/'}>
-              <button>Profile</button>
-            </Link>
           </div>
         </div>
       </div>
