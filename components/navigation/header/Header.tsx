@@ -3,9 +3,6 @@ import { IconLogo } from '../../assets/logo/IconLogo';
 import Iconplus from '../../assets/svg/Iconplus';
 import { UserLogo } from '../../assets/svg/UserLogo';
 
-
-
-
 const Header = () => {
   return (
     <div className="bg-black text-white justify-between flex items-center px-4 sm:px-12 py-4 min-h-[70px] text-sm">
@@ -33,6 +30,7 @@ const Header = () => {
       <img  src="flecha.png" alt="flecha" width="25px" />
      </div>
     </div>
+
     </div>
   );
 };
