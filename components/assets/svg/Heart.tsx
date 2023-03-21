@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-interface IHeart extends React.ComponentPropsWithoutRef<'svg'> {
+/*interface IHeart extends React.ComponentPropsWithoutRef<'svg'> {
   isActive: boolean;
 }
 
@@ -10,7 +10,7 @@ export const Heart: FC<IHeart> = ({ isActive = false, ...svgProps }) => {
       width="49"
       height="49"
       viewBox="0 0 49 49"
-      fill="none"
+      fill="none"G  
       xmlns="http://www.w3.org/2000/svg"
       {...svgProps}
     >
@@ -35,4 +35,4 @@ export const Heart: FC<IHeart> = ({ isActive = false, ...svgProps }) => {
 
     </svg>
   );
-};
+};*/
