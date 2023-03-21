@@ -1,8 +1,6 @@
+
 import { IconLogo } from '../../assets/logo/IconLogo';
 import { UserLogo } from '../../assets/svg/UserLogo';
-
-
-
 
 const Header = () => {
   return (
@@ -30,6 +28,7 @@ const Header = () => {
       <img  src="flecha.png" alt="flecha" width="25px" />
       </div>
     </div>
+
     </div>
   );
 };

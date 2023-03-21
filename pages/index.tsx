@@ -37,6 +37,7 @@ const Home: NextPageWithLayout = () => {
             </Link>
             <Link href={'/sign-up/'}>
               <button className='py-4 rounded-3xl w-full sm:w-[100px]'>sing up</button>
+
             </Link>
           </div>
         </div>
