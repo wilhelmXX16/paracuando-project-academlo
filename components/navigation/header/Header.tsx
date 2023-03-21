@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import { IconLogo } from '../../assets/logo/IconLogo';
+import Iconplus from '../../assets/svg/Iconplus';
 import { UserLogo } from '../../assets/svg/UserLogo';
 
 
@@ -12,7 +14,8 @@ const Header = () => {
       </div>
       <div className="flex items-center  px-4 sm:px-12 py-4 min-h-[70px] text-sm">
       <div className="text-blue-600 ml-8 flex">
-        <img src="vector.png" alt="vector" width="20px" />
+        {/* <img src="/vector.png" alt="vector" height={10} width={20}/> */}
+        <Iconplus/> 
         <p className='ml-3.5'>Crear publicación</p>
       </div>
       <div className='flex ml-8'>
@@ -28,7 +31,7 @@ const Header = () => {
       </div>
       <div className='ml-5'>
       <img  src="flecha.png" alt="flecha" width="25px" />
-      </div>
+     </div>
     </div>
     </div>
   );
