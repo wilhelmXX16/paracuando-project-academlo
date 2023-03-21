@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Logo from '../components/assets/logo/Logo';
-import Image from 'next/image';
 import { Layout } from '../components/layout/Layout';
 import { useCategories } from '../lib/services/categories.services';
 
@@ -51,20 +50,22 @@ const Home: NextPageWithLayout = () => {
         </h1>
         <h4>Lo que las personas piden mas</h4>
         </div>
-<div>
+<div className='flex'>
 
-        <div className='w-[40vh] border-solid border-2 border-indigo-400'>
-        <Image src={'/mock-event-image.png'} alt="mock"/>
-        <div>
+        <div className='w-[40vh] border-solid border-2 border-indigo-400 '>
+        <img src="mock-event-image.png" alt="mock"/>
+        <div className='h-2 p-4'>
         <h4>Concierto de Lady Gaga</h4>
         <p>El concierto con la tematica de Lady Gaga en las vegas. El concierto con la tematica de Lady Gaga en las vegas. El concierto con la tematica de Lady Gaga en las vegas.</p>
         </div>
-
         <div className='w-[40vh] border-solid border-2 border-indigo-400'>
-        <Image src={'mock-event-image.png'} alt="mock"/>
-        <div>
+        <img src="mock-event-image.png" alt="mock"/>
+        <div className='h-2 p-4'>
         <h4>Concierto de Lady Gaga</h4>
         <p>El concierto con la tematica de Lady Gaga en las vegas. El concierto con la tematica de Lady Gaga en las vegas. El concierto con la tematica de Lady Gaga en las vegas.</p>
+        </div>
+        <div className='w-[40vh] border-solid border-2 border-indigo-400'>
+        <img src="mock-event-image.png" alt="mock"/>
         </div>
         </div>
       </div>
