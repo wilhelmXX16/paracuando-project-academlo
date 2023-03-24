@@ -1,13 +1,16 @@
 import React from 'react';
 interface ILogo extends React.ComponentPropsWithRef<'svg'> {
-  variant?: 'white' | 'blue';
+  variant?: 'white' | 'blue' | 'yellow' | 'red';
   onlyIcon?: boolean;
 }
 
 const Logo: React.FC<ILogo> = ({ variant = 'white', onlyIcon = false }) => {
   const colors = {
     white: 'white',
+    yellow: '#F3F243',
     blue: '#1B4DB1',
+    red: '#EF3F47',
+
   };
   return (
     <svg
