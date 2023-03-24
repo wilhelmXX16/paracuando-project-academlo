@@ -45,10 +45,65 @@ export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
           }}
         >
           {events?.map((event, index) => (
-            <SwiperSlide key={index}>{index}</SwiperSlide>
+            <SwiperSlide key={index}>
+              {/* ------------Card Populares-----------------*/}
+              <div>
+                <div className=" border border-app-grayLight shadow-lg shadow-app-gray/50 rounded-[20px] my-2 mx-1 w-[300px] h-[454px]">
+                  <div id="img" className="h-[239px]">
+                    <img
+                      src={event.image}
+                      alt="mock"
+                      className="rounded-t-[20px] h-[239px]"
+                    />
+                  </div>
+                  <div
+                    id="inf"
+                    className=" app-text-1 px-6 py-4 flex-col gap-4  relative"
+                  >
+                    <div id="informacion" className=" h-[130px]">
+                      <a href="#" className="app-title-3 ">
+                        {event.title}
+                      </a>
+                      <div className="relative max-h-[76px] min-h-[60px] overflow-hidden ">
+                        <p className="w-full h-full  text-app-grayDark pt-2 ">
+                          {event.short_description}
+                        </p>
+                      </div>
+                    </div>
+                    <div id="link" className="flex-col flex gap-3  ">
+                      <a
+                        href="#"
+                        className="text-app-subtitle-2 text-app-blue font-semibold"
+                      >
+                        {event.url}
+                      </a>
+                      <div className="flex gap-2 items-center">
+                        {/*<img src="/public/img/Vector.svg" alt="">*/}
+                        <img src="Vector.svg" alt="mock" />
+                        <span>{event.votes} votos</span>
+                      </div>
+                    </div>
+                    <div
+                      id="corazon"
+                      className="relative top-[-221px]  left-[215px]"
+                    >
+                      {/*<img src="/public/img/like.svg" alt="">*/}
+                      <img
+                        src="like.svg"
+                        alt="mock"
+                        className="cursor-pointer "
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
           ))}
           <div className="hidden sm:flex items-center absolute top-0 bottom-0 -right-20 left-auto cursor-pointer">
             <SlideNextButton />
+          </div>
+          <div className="hidden sm:flex items-center absolute top-0 bottom-0 -left-20 right-auto cursor-pointer origin-center rotate-180 ">
+            <AntButton />
           </div>
         </Swiper>
       </div>
@@ -67,6 +122,22 @@ const SlideNextButton = ({ className }: ISlideNextButton) => {
 
   return (
     <button className={className} onClick={() => swiper.slideNext()}>
+      <BsArrowRightCircle
+        className="text-app-blue bg-white rounded-full"
+        size={50}
+      />
+    </button>
+  );
+};
+//............................
+interface ISAntButton {
+  className?: string;
+}
+const AntButton = ({ className }: ISAntButton) => {
+  const swiper = useSwiper();
+
+  return (
+    <button className={className} onClick={() => swiper.slidePrev()}>
       <BsArrowRightCircle
         className="text-app-blue bg-white rounded-full"
         size={50}
