@@ -13,25 +13,25 @@
     @apply m-auto container p-4 lg:max-w-6xl;
   }
   .app-title-1 {
-    @apply font-black text- 5xl leading-[56px] font-Roboto;
+    @apply font-black text-5xl leading-[56px] font-Roboto;
   }
   .app-subtitle-1 {
-    @apply font-Roboto not-italic font-medium text-base leading-[19px]
+    @apply font-Roboto not-italic font-medium text-base leading-[19px];
   }
   .app-title-2 {
-    @apply font-Roboto not-italic font-medium text-2xl leading-7 
+    @apply font-Roboto not-italic font-medium text-2xl leading-7;
   }
   .app-subtitle-2 {
-    @apply font-Roboto not-italic font-normal text-base leading-[19px]
+    @apply font-Roboto not-italic font-normal text-base leading-[19px];
   }
   .app-title-3 {
-    @apply font-Roboto not-italic font-semibold text-xl leading-[23px]
+    @apply font-Roboto not-italic font-semibold text-xl leading-[23px];
   }
   .app-text-1 {
-    @apply font-Roboto not-italic font-normal text-[15px] leading-[18px]
+    @apply font-Roboto not-italic font-normal text-[15px] leading-[18px];
   }
   .app-text-2 {
-    @apply font-Roboto not-italic font-medium text-sm leading-4
+    @apply font-Roboto not-italic font-medium text-sm leading-4;
   }
 
   .app-banner {
