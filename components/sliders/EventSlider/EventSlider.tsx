@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 interface IEventSlider {
   title?: string;
   subtitle?: string;
-  events: [];
+  events: IEvents[];
 }
 
 export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
@@ -113,6 +113,7 @@ export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
 
 // some-inner-component.jsx
 import { useSwiper } from 'swiper/react';
+import { IEvents } from '../../../lib/interfaces/event.interface';
 
 interface ISlideNextButton {
   className?: string;
