@@ -11,15 +11,15 @@ export const eventsMock = [
     title: 'Tienda de ropa femenina ZARA',
     short_description:
       'Tienda de ropa para todos los gustos de grandes y chiquitos',
-    votes: 99203,
-    url: 'ladygaga.com',
+    votes: 99,
+    url: 'zara.com',
     image: '/mock-event-image.png',
   },
   {
     title: 'Concierto de BTS',
     short_description: 'Grupo de música coreano',
-    votes: 99203,
-    url: 'ladygaga.com',
+    votes: 203,
+    url: 'bts.com',
     image: '/mock-event-image.png',
   },
 ];
