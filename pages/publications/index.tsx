@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import Logo from '../../components/assets/logo/Logo';
 import { NextPageWithLayout } from '../page';
+import Forms from './hook/Forms';
 
 const CreatePublication: NextPageWithLayout = () => {
   return (
-    <div className="flex flex-row flex-wrap h-screen border-solid border-2 border-red-500 gap-4">
-      <div className="bg-app-blue md:flex items-center justify-center w-[255px] p-5 border-solid border-2 border-yellow-500">
+    <div className="md:flex xs:flex-col flex-row flex-wrap h-screen border-solid border-2 border-green-500 w-screen">
+      <div className="bg-app-blue md:flex items-center justify-center w-[255px] h-screen p-5 border-solid ">
         <Link href={'/'}>
           <div className="">
-            <Logo variant="white" />
+            <Logo variant="white" className="w-[3" />
             <h1 className="text-app-yellow py-10 ">¡Bienvenido, creador!</h1>
             <p className="text-app-grayLighter pb-[200px]">
               A continuación puedes completar la info de la marca, artista o
@@ -18,50 +19,19 @@ const CreatePublication: NextPageWithLayout = () => {
           </div>
         </Link>
       </div>
-      <div className=" w-full max-w-lg">
-        <Link href={'/'}>
-          <h1 className="text-app-blue mt-8">Back</h1>
-        </Link>
-        <div className="border-solid border-1 bg-app-grayLight h-1 w-[612px] rounded-md">
-          <div className=" bg-app-blue h-0 w-[361px]"></div>
+      <div className="md:flex items-center justify-center w-3/4 h-screen">
+        <div className="flex justify-center flex-col gap-2">
+          <Link href={'/'}>
+            <span className="text-app-blue pt-8">Back</span>
+          </Link>
+          <div className=" bg-app-grayLight h-2 md:w-[612px] rounded-md ">
+            <div className=" bg-app-blue h-2 md:w-[361px] rounded-md"></div>
+          </div>
+          <Forms />
+          <button className="bg-app-blue text-app-grayLighter rounded-md h-12 w-32 ">
+            Siguiente
+          </button>
         </div>
-        <h1>Publicación</h1>
-        <samp>Información básica</samp>
-        <form>
-          <label className="flex flex-col gap-1">
-            <span className="font-semibold">Titulo de publicación</span>
-            <input className="p-4 border border-app-grayDark" type="text" />
-          </label>
-          <label className="flex flex-col gap-1">
-            <span className="font-semibold">Titulo de publicación</span>
-            <input className="p-4 border border-app-grayDark" type="text" />
-          </label>
-          <label className="flex flex-col gap-1">
-            <span className="font-semibold">Tipo</span>
-            <select name="tipo">
-              <option>---</option>
-              <option>---</option>
-              <option>---</option>
-            </select>
-          </label>
-          <label className="flex flex-col gap-1">
-            <span className="font-semibold">Categoria</span>
-            <select name="tipo">
-              <option>---</option>
-              <option>---</option>
-              <option>---</option>
-            </select>
-          </label>
-          <label className="flex flex-col gap-1">
-            <span className="font-semibold">¿Por qué lo recomiendas?</span>
-            <input className="p-4 border border-app-grayDark" type="stext" />
-          </label>
-          <label className="flex flex-col gap-1">
-            <span className="font-semibold">Link de referencia</span>
-            <input className="p-4 border border-app-grayDark" type="stext" />
-          </label>
-        </form>
-        <button>Siguiente</button>
       </div>
     </div>
   );
