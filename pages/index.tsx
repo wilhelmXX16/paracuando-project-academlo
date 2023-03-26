@@ -13,9 +13,10 @@ const Home: NextPageWithLayout = () => {
   return (
     <div>
       {/* HERO SECTION */}
-      <div className='min-h-[488px] flex justify-center items-center flex-col bg-[url("/hero-banner.png")] bg-cover bg-center app-banner -mt-4 gap-5'>
+      <div className=' relative min-h-[488px] flex justify-center items-center flex-col bg-[url("/hero-banner.png")] bg-cover bg-center app-banner -mt-4 gap-5'>
         <div>
           <Logo />
+          <div className=" absolute flex m-[-16]"></div>
         </div>
         <div className="flex flex-col gap-4 items-center">
           <input
