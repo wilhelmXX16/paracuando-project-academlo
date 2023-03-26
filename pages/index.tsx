@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Logo from '../components/assets/logo/Logo';
 import { Layout } from '../components/layout/Layout';
+import { EventSlider } from '../components/sliders/EventSlider/EventSlider';
+import { eventsMock } from '../lib/data/events.mock';
 import { useCategories } from '../lib/services/categories.services';
 
 import { NextPageWithLayout } from './page';
@@ -45,42 +47,44 @@ const Home: NextPageWithLayout = () => {
           </div>
         </div>
       </div>
+
       {/* CONTENIDO */}
-      <div className="bg-red-300 h-[70vh]">
-        <div>
-          <div>
-            <h1>Populares en Perú</h1>
-            <h4>Lo que las personas piden mas</h4>
-          </div>
-          <div className="flex">
-            <div className="w-[40vh] border-solid border-2 border-indigo-400 ">
-              <img src="mock-event-image.png" alt="mock" />
-              <div className="h-2 p-4">
-                <h4>Concierto de Lady Gaga</h4>
-                <p>
-                  El concierto con la tematica de Lady Gaga en las vegas. El
-                  concierto con la tematica de Lady Gaga en las vegas. El
-                  concierto con la tematica de Lady Gaga en las vegas.
-                </p>
-              </div>
-              <div className="w-[40vh] border-solid border-2 border-indigo-400">
-                <img src="mock-event-image.png" alt="mock" />
-                <div className="h-2 p-4">
-                  <h4>Concierto de Lady Gaga</h4>
-                  <p>
-                    El concierto con la tematica de Lady Gaga en las vegas. El
-                    concierto con la tematica de Lady Gaga en las vegas. El
-                    concierto con la tematica de Lady Gaga en las vegas.
-                  </p>
-                </div>
-                <div className="w-[40vh] border-solid border-2 border-indigo-400">
-                  <img src="mock-event-image.png" alt="mock" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+      <div className=" py-10">
+        <EventSlider
+          title="Populares en Perú"
+          subtitle="Lo que las personas piden mas"
+          events={eventsMock}
+        />
       </div>
+      <div className=" py-10">
+        <EventSlider
+          title="Populares en Perú"
+          subtitle="Lo que las personas piden mas"
+          events={eventsMock}
+        />
+      </div>
+      <section className="  w-[100%] py-10 ">
+        {/* ------------Seccion Hagamoslo mas personal-----------------*/}
+        <div>
+          <h1 className="app-title-2">¡Hagámoslo más personal!</h1>
+          <h4>
+            Selecciona tus interés para brindarte sugerencia de acuerdo a tus
+            gustos
+          </h4>
+          <button className="border border-app-grayLight p-2">
+            Restaurantes
+          </button>
+          <button className="border border-app-grayLight p-2">
+            Artistas Peruanos
+          </button>
+          <button className="border border-app-grayLight p-2">Rock</button>
+          <button className="border border-app-grayLight p-2">
+            Artistas Colombia
+          </button>
+          <button className="border border-app-grayLight p-2">Indie</button>
+        </div>
+      </section>
     </div>
   );
 };
