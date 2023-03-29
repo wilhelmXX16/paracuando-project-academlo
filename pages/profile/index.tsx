@@ -8,9 +8,9 @@ const ProfilePage: NextPageWithLayout = () => {
     <div>
       <div className=" py-10">
         <EventUser
-          title="Mis Gustos"
-          subtitle="Lo que las personas piden mas"
-          events={eventsMock}
+          //title="Mis Gustos"
+          //subtitle="Lo que las personas piden mas"
+          //events={eventsMock}
         />
       </div>
 
