@@ -2,15 +2,24 @@ import Link from 'next/link';
 import Logo from '../components/assets/logo/Logo';
 import { Layout } from '../components/layout/Layout';
 import { EventSlider } from '../components/sliders/EventSlider/EventSlider';
-import { eventsMock } from '../lib/data/events.mock';
-import { useCategories } from '../lib/services/categories.services';
+// import { useCategories } from '../lib/services/categories.services';
+import { usePublications } from '../lib/services/publications.services';
 
 import { NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
-  const { data, error, isLoading } = useCategories();
+  // const { data, error, isLoading } = useCategories();
 
-  console.log({ data, error, isLoading });
+  // console.log({ data, error, isLoading });
+
+  const {
+    data: publications,
+    error,
+    isLoading,
+    mutate: mutatePublications,
+  } = usePublications();
+  //console.log({ publications, error, isLoading });
+  //console.log(publications);
 
   return (
     <div>
@@ -25,7 +34,7 @@ const Home: NextPageWithLayout = () => {
             type="text"
             placeholder="¿Qué quieres ver en tu ciudad?"
           />
-          <div className="bg-white rounded-3xl justify-between">
+          <div className="bg-white rounded-3xl justify-between gap-2">
             <Link href={'/category/marcas-y-tiendas '}>
               <button className="py-4 rounded-3xl w-full sm:w-[150px] mr-8">
                 Marcas y tiendas
@@ -53,35 +62,48 @@ const Home: NextPageWithLayout = () => {
         <EventSlider
           title="Populares en Perú"
           subtitle="Lo que las personas piden mas"
-          events={eventsMock}
+          events={publications?.results || []}
         />
       </div>
       <div className=" py-10">
         <EventSlider
           title="Populares en Perú"
           subtitle="Lo que las personas piden mas"
-          events={eventsMock}
+          events={publications?.results || []}
         />
       </div>
       <section className="  w-[100%] py-10 ">
         {/* ------------Seccion Hagamoslo mas personal-----------------*/}
-        <div>
-          <h1 className="app-title-2">¡Hagámoslo más personal!</h1>
-          <h4>
-            Selecciona tus interés para brindarte sugerencia de acuerdo a tus
-            gustos
-          </h4>
-          <button className="border border-app-grayLight p-2">
-            Restaurantes
-          </button>
-          <button className="border border-app-grayLight p-2">
-            Artistas Peruanos
-          </button>
-          <button className="border border-app-grayLight p-2">Rock</button>
-          <button className="border border-app-grayLight p-2">
-            Artistas Colombia
-          </button>
-          <button className="border border-app-grayLight p-2">Indie</button>
+        <div className="bg-app-grayLighter p-7 flex flex-col gap-6">
+          <div>
+            <h2 className="app-title-2 text-app-grayDark pb-3">
+              ¡Hagámoslo más personal!
+            </h2>
+            <p className="app-subtitle-2 ">
+              Selecciona tus interés para brindarte sugerencia de acuerdo a tus
+              gustos
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-4 overflow-x-auto ">
+            <button className="bg-white border border-app-gray text-app-gray  rounded-3xl text-xs px-5 py-[15px] whitespace-nowrap">
+              Restaurantes
+            </button>
+            <button className="bg-white border border-app-gray text-app-gray  rounded-3xl text-xs px-5 py-[15px] whitespace-nowrap">
+              Artistas Mexicanos
+            </button>
+            <button className="bg-white border border-app-gray text-app-gray  rounded-3xl text-xs px-5 py-[15px] whitespace-nowrap">
+              Rock
+            </button>
+            <button className="bg-white border border-app-gray text-app-gray  rounded-3xl text-xs px-5 py-[15px] whitespace-nowrap">
+              Artistas Colombia
+            </button>
+            <button className="bg-white border border-app-gray text-app-gray  rounded-3xl text-xs px-5 py-[15px] whitespace-nowrap">
+              Indie
+            </button>
+          </div>
+          <a href="#" className="app-subtitle-2 text-app-blue">
+            Ver todos los intereses
+          </a>
         </div>
       </section>
     </div>
