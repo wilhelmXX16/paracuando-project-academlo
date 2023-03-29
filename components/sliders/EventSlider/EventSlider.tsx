@@ -4,16 +4,16 @@ import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 interface IEventSlider {
-  firstName?: string;
+  title?: string;
   subtitle?: string;
   events: IEvents[];
 }
 
-export const EventSlider: FC<IEventSlider> = ({ firstName, subtitle, events }) => {
+export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
   return (
     <div>
       <div className="pb-6">
-        <h2 className="app-title-2 pb-1">{firstName}</h2>
+        <h2 className="app-title-2 pb-1">{title}</h2>
         <p className="app-subtitle-2">{subtitle}</p>
       </div>
       <div className="relative">
