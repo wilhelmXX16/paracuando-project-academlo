@@ -104,6 +104,7 @@ export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
                           <img src="like2.svg" alt="" />
                         )}
                       </button>
+                      </div>
                     </div>
                   </div>
                 </div>
