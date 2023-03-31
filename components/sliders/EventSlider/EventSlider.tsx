@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,6 +10,10 @@ interface IEventSlider {
 }
 
 export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
+  const [like, setLike] = useState(false);
+  const clicklike = () => {
+    setLike(!like);
+  };
   return (
     <div>
       <div className="pb-6">
@@ -83,16 +87,19 @@ export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
                         <span>{event.votes} votos</span>
                       </div>
                     </div>
-                    <div
-                      id="corazon"
-                      className="relative top-[-221px]  left-[215px]"
-                    >
-                      {/*<img src="/public/img/like.svg" alt="">*/}
-                      <img
-                        src="like.svg"
-                        alt="mock"
-                        className="cursor-pointer "
-                      />
+
+                    {/* pruebas */}
+                    <div className="relative top-[-221px]  left-[215px]">
+                      <button
+                        onClick={clicklike}
+                        className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300"
+                      >
+                        {like ? (
+                          <img src="like.svg" alt="" />
+                        ) : (
+                          <img src="like2.svg" alt="" />
+                        )}
+                      </button>
                     </div>
                   </div>
                 </div>

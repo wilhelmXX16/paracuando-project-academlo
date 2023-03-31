@@ -65,23 +65,37 @@ const Home: NextPageWithLayout = () => {
       </div>
       <section className="  w-[100%] py-10 ">
         {/* ------------Seccion Hagamoslo mas personal-----------------*/}
-        <div>
-          <h1 className="app-title-2">¡Hagámoslo más personal!</h1>
-          <h4>
-            Selecciona tus interés para brindarte sugerencia de acuerdo a tus
-            gustos
-          </h4>
-          <button className="border border-app-grayLight p-2">
-            Restaurantes
-          </button>
-          <button className="border border-app-grayLight p-2">
-            Artistas Peruanos
-          </button>
-          <button className="border border-app-grayLight p-2">Rock</button>
-          <button className="border border-app-grayLight p-2">
-            Artistas Colombia
-          </button>
-          <button className="border border-app-grayLight p-2">Indie</button>
+
+        <div className="bg-app-grayLighter p-7 flex flex-col gap-6">
+          <div>
+            <h2 className="app-title-2 text-app-grayDark pb-3">
+              ¡Hagámoslo más personal!
+            </h2>
+            <p className="app-subtitle-2 ">
+              Selecciona tus interés para brindarte sugerencia de acuerdo a tus
+              gustos
+            </p>
+          </div>
+          <div className="flex items-center gap-4 overflow-x-auto ">
+            <button className="bg-white border border-app-gray text-app-gray  rounded-3xl text-xs px-5 py-[15px] whitespace-nowrap">
+              Restaurantes
+            </button>
+            <button className="bg-white border border-app-gray text-app-gray  rounded-3xl text-xs px-5 py-[15px] whitespace-nowrap">
+              Artistas Mexicanos
+            </button>
+            <button className="bg-white border border-app-gray text-app-gray  rounded-3xl text-xs px-5 py-[15px] whitespace-nowrap">
+              Rock
+            </button>
+            <button className="bg-white border border-app-gray text-app-gray  rounded-3xl text-xs px-5 py-[15px] whitespace-nowrap">
+              Artistas Colombia
+            </button>
+            <button className="bg-white border border-app-gray text-app-gray  rounded-3xl text-xs px-5 py-[15px] whitespace-nowrap">
+              Indie
+            </button>
+          </div>
+          <a href="#" className="app-subtitle-2 text-app-blue">
+            Ver todos los intereses
+          </a>
         </div>
       </section>
     </div>
