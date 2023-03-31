@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <div className="bg-black text-white justify-between flex items-center px-4 sm:px-12 py-4 min-h-[70px] text-sm">
       <div>
-        <IconLogo />
+        <Link href={'/'}>
+          <IconLogo />
+        </Link>
       </div>
       <div className="flex items-center  px-4 sm:px-12 py-4 min-h-[70px] text-sm">
         <div className="text-blue-600 ml-8 flex">

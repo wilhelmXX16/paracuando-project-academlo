@@ -1,9 +1,16 @@
 import { Layout } from '../../components/layout/Layout';
 import { EventSlider } from '../../components/sliders/EventSlider/EventSlider';
-import { eventsMock } from '../../lib/data/events.mock';
+import { usePublications } from '../../lib/services/publications.services';
 import { NextPageWithLayout } from '../page';
 
 const Details: NextPageWithLayout = () => {
+  const {
+    data: posts,
+    error,
+    isLoading,
+    mutate: mutatePublications,
+  } = usePublications();
+
   return (
     <div>
       {/* -------------BUTTONS AND SEARCH----------------- */}
@@ -105,7 +112,7 @@ const Details: NextPageWithLayout = () => {
         <EventSlider
           title="Populares en Perú"
           subtitle="Lo que las personas piden mas"
-          events={eventsMock}
+          events={posts?.results || []}
         />
       </div>
       <section className="  w-[100%] py-10 "></section>

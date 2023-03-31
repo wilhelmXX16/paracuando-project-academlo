@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 interface IEventSlider {
   title?: string;
   subtitle?: string;
-  events: IEvents[];
+  events: Publication[];
 }
 
 export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
@@ -55,7 +55,11 @@ export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
                 <div className=" border border-app-grayLight shadow-lg shadow-app-gray/50 rounded-[20px] my-2 mx-1 w-[300px] h-[454px]">
                   <div id="img" className="h-[239px]">
                     <img
-                      src={event.image}
+                      src={
+                        event.images
+                          ? event.images[0].image_url
+                          : 'https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-1-scaled.png'
+                      }
                       alt="mock"
                       className="rounded-t-[20px] h-[239px]"
                     />
@@ -70,7 +74,7 @@ export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
                       </a>
                       <div className="relative max-h-[76px] min-h-[60px] overflow-hidden ">
                         <p className="w-full h-full  text-app-grayDark pt-2 ">
-                          {event.short_description}
+                          {event.description}
                         </p>
                       </div>
                     </div>
@@ -79,12 +83,12 @@ export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
                         href="#"
                         className="text-app-subtitle-2 text-app-blue font-semibold"
                       >
-                        {event.url}
+                        {event.reference_link}
                       </a>
                       <div className="flex gap-2 items-center">
                         {/*<img src="/public/img/Vector.svg" alt="">*/}
                         <img src="Vector.svg" alt="mock" />
-                        <span>{event.votes} votos</span>
+                        <span>{event.votes_count} votos</span>
                       </div>
                     </div>
 
@@ -120,7 +124,7 @@ export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
 
 // some-inner-component.jsx
 import { useSwiper } from 'swiper/react';
-import { IEvents } from '../../../lib/interfaces/event.interface';
+import { Publication } from '../../../lib/interfaces/publications.interface';
 
 interface ISlideNextButton {
   className?: string;
