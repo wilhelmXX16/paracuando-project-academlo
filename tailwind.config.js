@@ -13,6 +13,10 @@ module.exports = {
       xl: '1536px',
     },
     extend: {
+      backgroundImage: {
+        uno: "url('like.svg')",
+        dos: "url('like2.svg')",
+      },
       colors: {
         'app-blue': '#1b4db1',
         'app-yellow': '#f3f243',
