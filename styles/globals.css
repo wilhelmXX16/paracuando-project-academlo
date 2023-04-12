@@ -10,7 +10,7 @@
 
 @layer components {
   .app-container {
-    @apply m-auto container p-4 lg:max-w-6xl;
+    @apply m-auto container lg:max-w-6xl;
   }
   .app-title-1 {
     @apply font-black text-5xl leading-[56px] font-Roboto;
