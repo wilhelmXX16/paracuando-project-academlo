@@ -13,7 +13,7 @@ const CreatePublication: NextPageWithLayout = () => {
             <h1 className="text-app-yellow py-10 ">¡Bienvenido, creador!</h1>
             <p className="text-app-grayLighter pb-[200px]">
               A continuación puedes completar la info de la marca, artista o
-              torneo que quieres cerca.
+              torneo que quieres cerca
             </p>
             <p className="text-app-grayLighter">Help</p>
           </div>

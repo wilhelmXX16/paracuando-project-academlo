@@ -31,25 +31,25 @@ const Home: NextPageWithLayout = () => {
         </div>
         <div className="flex flex-col gap-4 items-center">
           <input
-            className="px-6 py-4 rounded-3xl w-full sm:w-[465px]"
+            className="px-6 py-4 rounded-full w-full sm:w-[465px]"
             type="text"
             placeholder="¿Qué quieres ver en tu ciudad?"
           />
-          <div className="bg-white rounded-3xl justify-between gap-2">
+          <div className=" flex justify-between gap-2">
             <Link href={'/category/marcas-y-tiendas '}>
-              <button className="py-4 rounded-3xl w-full sm:w-[150px] mr-8">
+              <button className="bg-white rounded-full py-4 w-full sm:w-[150px] mr-2">
                 Marcas y tiendas
               </button>
             </Link>
 
             <Link href={'/category/marcas-y-tiendas'}>
-              <button className="py-4 rounded-3xl w-full sm:w-[200px]">
+              <button className=" bg-white py-4 w-full rounded-full sm:w-[200px] mr-2">
                 Artistas y conciertos
               </button>
             </Link>
 
             <Link href={'/category/marcas-y-tiendas'}>
-              <button className="py-4 rounded-3xl w-full sm:w-[100px]">
+              <button className="bg-white py-4 w-full rounded-full sm:w-[100px] mr-2mr-2">
                 Torneos
               </button>
             </Link>
