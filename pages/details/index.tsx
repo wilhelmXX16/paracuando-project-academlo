@@ -1,15 +1,16 @@
 import { Layout } from '../../components/layout/Layout';
-// import { usePublications } from '../../lib/services/publications.services';
+import { EventSlider } from '../../components/sliders/EventSlider/EventSlider';
+import { usePublications } from '../../lib/services/publications.services';
 import { NextPageWithLayout } from '../page';
 
-// const {
-//   data: posts,
-//   error,
-//   isLoading,
-//   mutate: mutatePublications,
-// } = usePublications();
-
 const Details: NextPageWithLayout = () => {
+  const {
+    data: posts,
+    error,
+    isLoading,
+    mutate: mutatePublications,
+  } = usePublications();
+
   return (
     <div>
       {/* -------------BUTTONS AND SEARCH----------------- */}
@@ -108,11 +109,11 @@ const Details: NextPageWithLayout = () => {
 
       {/* -------------CARD------------------- */}
       <div className=" py-10">
-        {/* <EventSlider
+        <EventSlider
           title="Populares en Perú"
           subtitle="Lo que las personas piden mas"
-          events={publications?.results || []}
-        /> */}
+          events={posts?.results || []}
+        />
       </div>
       <section className="  w-[100%] py-10 "></section>
     </div>
