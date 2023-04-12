@@ -1,13 +1,12 @@
 import { FC } from 'react';
 
-
 interface IEventUser {
   title?: string;
   subtitle?: string;
   events: Publication[];
 }
 
-export const EventUser: FC<IEventUser> = ({events}) => {
+export const EventUser: FC<IEventUser> = ({ events }) => {
   return (
     <div>
       <div className="relative flex flex-wrap justify-around">
@@ -18,7 +17,7 @@ export const EventUser: FC<IEventUser> = ({events}) => {
                 <div className="h-[239px]">
                   <img
                     src={
-                      event.images
+                      event.images[0]
                         ? event.images[0].image_url
                         : 'https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-1-scaled.png'
                     }
@@ -84,9 +83,6 @@ interface ISlideNextButton {
 const SlideNextButton = ({ className }: ISlideNextButton) => {
   const swiper = useSwiper();
   return (
-    <button className={className} onClick={() => swiper.slideNext()}>
-
-    </button>
+    <button className={className} onClick={() => swiper.slideNext()}></button>
   );
 };
-
