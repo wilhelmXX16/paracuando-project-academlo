@@ -14,6 +14,8 @@ export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
   const clicklike = () => {
     setLike(!like);
   };
+  //console.log(events);
+
   return (
     <div>
       <div className="pb-6">
@@ -57,12 +59,12 @@ export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
                     <div id="img" className="h-[239px]">
                       <img
                         src={
-                          event.images
+                          event.images[0]
                             ? event.images[0].image_url
                             : 'https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-1-scaled.png'
                         }
                         alt="mock"
-                        className="rounded-t-[20px] h-[239px]"
+                        className="rounded-t-[20px] h-full w-full "
                       />
                     </div>
                     <div
@@ -94,16 +96,16 @@ export const EventSlider: FC<IEventSlider> = ({ title, subtitle, events }) => {
                       </div>
                       {/* pruebas */}
                       <div className="relative top-[-221px]  left-[215px]">
-                      <button
-                        onClick={clicklike}
-                        className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300"
-                      >
-                        {like ? (
-                          <img src="like.svg" alt="" />
-                        ) : (
-                          <img src="like2.svg" alt="" />
-                        )}
-                      </button>
+                        <button
+                          onClick={clicklike}
+                          className="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300"
+                        >
+                          {like ? (
+                            <img src="like.svg" alt="" />
+                          ) : (
+                            <img src="like2.svg" alt="" />
+                          )}
+                        </button>
                       </div>
                     </div>
                   </div>
